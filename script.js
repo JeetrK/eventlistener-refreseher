@@ -49,6 +49,8 @@ document.getElementById('btnClear').addEventListener('click', () => {
   clickCount = 0
 })
 
+
+dblCard.addEventListener = document.getElementById('mouseenter', () => {})
 /* =================================================
    🔥 Event Listeners Challenge (Pick ONE to complete)
 
