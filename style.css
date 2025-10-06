@@ -87,3 +87,7 @@ header{
   text-align:center;
   margin-top:.25rem;
 }
+.highlight {
+  background-color: #fff3cd; 
+  transition: background-color 0.3s ease;
+}

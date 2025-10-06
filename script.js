@@ -49,8 +49,18 @@ document.getElementById('btnClear').addEventListener('click', () => {
   clickCount = 0
 })
 
+const out = document.getElementById('out');
 
-dblCard.addEventListener = document.getElementById('mouseenter', () => {})
+dblCard.addEventListener('mouseenter', () => {
+  dblCard.classList.add('highlight');
+  hoverCount++;
+  out.textContent = `Hovered over the card ${hoverCount} ${hoverCount === 1 ? 'time' : 'times'}.`;
+});
+
+dblCard.addEventListener('mouseleave', () => {
+  dblCard.classList.remove('highlight');
+  out.textContent = 'Mouse left the card.';
+});
 /* =================================================
    🔥 Event Listeners Challenge (Pick ONE to complete)
 
