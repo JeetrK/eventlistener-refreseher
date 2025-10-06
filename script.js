@@ -18,12 +18,23 @@ document.getElementById('btnClick').addEventListener('click', () => {
 /* --------------------------------------
    Demo 2: Double-click (toggle highlight)
 --------------------------------------- */
-
+const dblCard = document.getElementById('dblCard')
+dblCard.addEventListener('dblclick', () => {
+dblCard.classList.toggle('activated')
+const state = dblCard.classList.contains('activated') ? 'ON' : 'OFF'
+render(`<p>Double-click highlight is <strong>${state}</strong>.</p>`)
+})
 
 /* --------------------------------
    Demo 3: Keypress (show key/code)
 --------------------------------- */
+const kbKey = document.getElementById('kbKey')
+const kbCode = document.getElementById('kbCide')
 
+document.addEventListener('keydown', (e) => {
+kbKey.textContent = e.key === ' ' ? '(space)' : e.key
+kbCode.textContent = e.code
+})
 
 /* ----------------------------------------
    Demo 4: Show Time (12-hour format + day)
